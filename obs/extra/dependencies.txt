@@ -1,0 +1,2 @@
+icon.png
+libnsl.so.1
