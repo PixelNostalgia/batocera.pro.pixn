@@ -1,0 +1,3 @@
+icon.png
+libselinux.so.1
+tar
