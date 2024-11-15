@@ -54,14 +54,14 @@ mkdir $pro/$appname 2>/dev/null
 mkdir $pro/$appname/extra 2>/dev/null
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-url=https://github.com/uureel/batocera.pro/raw/main/.dep
+url=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/.dep
 depfile=dependencies.txt; dep=$pro/.dep; mkdir $pro/.dep 2>/dev/null; cd $dep
 wget -q -O $dep/$depfile $url/$depfile 2>/dev/null; dos2unix $dep/$depfile 1>/dev/null 2>/dev/null;
 rm /userdata/system/pro/.dep/libtinfo.so.6 2>/dev/null
 nl=$(cat $dep/$depfile | wc -l); l=1; while [[ "$l" -le "$((nl+2))" ]]; do
 d=$(cat $dep/$depfile | sed ""$l"q;d"); wget -q -O $dep/$d $url/$d 2>/dev/null; 
 if [[ "$(echo $d | grep "lib")" != "" ]]; then ln -s $dep/$d /lib/$d 2>/dev/null; fi; ((l++)); done
-wget -q -O $pro/$appname/extra/icon.png https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png; chmod a+x $dep/tput; cd ~/
+wget -q -O $pro/$appname/extra/icon.png https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png; chmod a+x $dep/tput; cd ~/
 # --------------------------------------------------------------------
 # // end of dependencies 
 #
@@ -299,7 +299,7 @@ icon=/userdata/system/pro/$appname/extra/icon.png
 if [[ -e "$icon" ]] && [[ $(wc -c "$icon" | awk '{print $1}') != "0" ]]; then
 :
 else 
-wget -q -O $icon https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png
+wget -q -O $icon https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png
 fi
 # //
 # -- prepare f1 - applications - app shortcut, 

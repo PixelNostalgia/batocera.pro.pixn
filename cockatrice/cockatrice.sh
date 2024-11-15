@@ -48,8 +48,8 @@ mkdir $pro/$appname 2>/dev/null
 mkdir $pro/$appname/extra 2>/dev/null
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/uureel/batocera.pro/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
+mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
 chmod 777 ~/pro/.dep/* && for file in /userdata/system/pro/.dep/lib*; do sudo ln -s "$file" "/usr/lib/$(basename $file)"; done
 # --------------------------------------------------------------------
 # // end of dependencies 
@@ -233,11 +233,11 @@ cd $temp
 ##c=cockatrice.tar.gz
 ##c1=cockatrice.tar.bz2.partaa
 ##c2=cockatrice.tar.bz2.partab
-##curl --progress-bar --remote-name --location "https://github.com/uureel/batocera.pro/raw/main/$appname/extra/$c1"
-##curl --progress-bar --remote-name --location "https://github.com/uureel/batocera.pro/raw/main/$appname/extra/$c2"
+##curl --progress-bar --remote-name --location "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/$c1"
+##curl --progress-bar --remote-name --location "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/$c2"
 # --- join
 ##cat $temp/cockatrice.tar.bz2.parta* >$temp/cockatrice.tar.gz
-###curl --progress-bar --remote-name --location "https://github.com/uureel/batocera.pro/raw/main/$appname/extra/cockatrice.zip"
+###curl --progress-bar --remote-name --location "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/cockatrice.zip"
 ###yes "y" | unzip -oq $PWD/cockatrice.zip 
 #curl --progress-bar --remote-name --location "https://batocera.pro/app/cockatrice.tar.gz"
 #wget --progress=bar:force --tries=10 --no-check-certificate --no-cache --no-cookies -O $temp/cockatrice.tar.gz http://batocera.pro/app/cockatrice.tar.gz
@@ -258,8 +258,8 @@ echo -e "${T}$pro/$appname   [${T}$SIZE]   ${G}OK${W}"
 echo
 line $cols '='; echo
 
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/.batocera https://github.com/uureel/batocera.pro/raw/main/$appname/extra/batocera.sh
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/.batocera https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/batocera.sh
 dos2unix $pro/$appname/.batocera $pro/$appname/cockatrice 2>/dev/null
 chmod 777 $pro/$appname/.batocera $pro/$appname/cockatrice 2>/dev/null
 
@@ -281,7 +281,7 @@ cp "$launcher" "/userdata/roms/ports/$appname.sh" 2>/dev/null
 # --------------------------------------------------------------------
 # -- get padtokey profile
 rm "/userdata/roms/ports/$appname.sh.keys" 2>/dev/null 
-wget --tries=10 -q -O "/userdata/roms/ports/$appname.sh.keys" "https://raw.githubusercontent.com/uureel/batocera.pro/main/$appname/extra/$appname.sh.keys"
+wget --tries=10 -q -O "/userdata/roms/ports/$appname.sh.keys" "https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/$appname/extra/$appname.sh.keys"
 # --------------------------------------------------------------------
 # -- prepare f1 - applications - app shortcut, 
 shortcut=/userdata/system/pro/$appname/extra/$appname.desktop

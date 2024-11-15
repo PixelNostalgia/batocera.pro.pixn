@@ -30,7 +30,7 @@ fi
 
 if ! command -v docker &> /dev/null; then
     echo "Docker could not be found, installing Docker..."
-    curl -L https://github.com/uureel/batocera.pro/raw/main/docker/install.sh | bash
+    curl -L https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/docker/install.sh | bash
     # Check if Docker was successfully installed
     if ! command -v docker &> /dev/null; then
         echo "Docker installation failed. Please install Docker manually."

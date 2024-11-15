@@ -6,7 +6,7 @@ APPNAME="COCKATRICE"     # for installer info
 appname=cockatrice       # directory inside /userdata/system/pro/...
 AppName=cockatrice.exe   # app binary file name
 APPPATH=/userdata/system/pro/$appname
-APPLINK=https://github.com/uureel/batocera.pro/raw/main/cockatrice/extra/dependencies.txt
+APPLINK=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/cockatrice/extra/dependencies.txt
 ORIGIN="COCKATRICE.GITHUB.IO" # credit & info
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
@@ -48,14 +48,14 @@ mkdir $pro/$appname 2>/dev/null
 mkdir $pro/$appname/extra 2>/dev/null
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-url=https://github.com/uureel/batocera.pro/raw/main/.dep
+url=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/.dep
 depfile=dependencies.txt; dep=$pro/.dep; mkdir $pro/.dep 2>/dev/null; cd $dep
 wget -q -O $dep/$depfile $url/$depfile 2>/dev/null; dos2unix $dep/$depfile 1>/dev/null 2>/dev/null;
 rm /userdata/system/pro/.dep/libtinfo.so.6 2>/dev/null
 nl=$(cat $dep/$depfile | wc -l); l=1; while [[ "$l" -le "$((nl+2))" ]]; do
 d=$(cat $dep/$depfile | sed ""$l"q;d"); wget -q -O $dep/$d $url/$d 2>/dev/null; 
 if [[ "$(echo $d | grep "lib")" != "" ]]; then ln -s $dep/$d /lib/$d 2>/dev/null; fi; ((l++)); done
-wget -q -O $pro/$appname/extra/icon.png https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png; chmod a+x $dep/tput; cd ~/
+wget -q -O $pro/$appname/extra/icon.png https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png; chmod a+x $dep/tput; cd ~/
 # --------------------------------------------------------------------
 # // end of dependencies 
 #
@@ -253,8 +253,8 @@ cd $temp
 c=cockatrice.tar.gz
 c1=cockatrice.tar.bz2.partaa
 c2=cockatrice.tar.bz2.partab
-curl --progress-bar --remote-name --location "https://github.com/uureel/batocera.pro/raw/main/$appname/extra/$c1"
-curl --progress-bar --remote-name --location "https://github.com/uureel/batocera.pro/raw/main/$appname/extra/$c2"
+curl --progress-bar --remote-name --location "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/$c1"
+curl --progress-bar --remote-name --location "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/$c2"
 # --- join
 cat $temp/cockatrice.tar.bz2.parta* >$temp/cockatrice.tar.gz
 pro=/userdata/system/pro; chmod a+x $pro/.dep/tar; $pro/.dep/tar -xf $temp/cockatrice.tar.gz -C $pro/$appname/

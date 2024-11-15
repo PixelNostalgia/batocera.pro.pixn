@@ -70,7 +70,7 @@ command=$pro/$appname/extra/command; rm $command 2>/dev/null;
 echo "$COMMAND" >> $command 2>/dev/null 
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-url=https://github.com/uureel/batocera.pro/raw/main/$appname/extra
+url=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra
 depfile=dependencies.txt; dep=$pro/$appname/extra; cd $dep
 wget -q -O $dep/$depfile $url/$depfile 2>/dev/null; dos2unix $dep/$depfile 1>/dev/null 2>/dev/null;
 rm /userdata/system/pro/.dep/libtinfo.so.6 2>/dev/null

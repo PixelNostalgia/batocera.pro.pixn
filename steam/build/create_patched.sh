@@ -527,7 +527,7 @@ echo "Entering chroot"
 # REBUILD LIBC WITH DT_HASH PATCH
 chroot "${bootstrap}" \
 /usr/bin/env LANG=en_US.UTF-8 TERM=xterm PATH="/bin:/sbin:/usr/bin:/usr/sbin" /bin/bash -c \
-"curl -Ls https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/libc-dthash-patch.sh | bash && exit"
+"curl -Ls https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/libc-dthash-patch.sh | bash && exit"
 # ------------------------------------------------------------------------------------------
 
 echo "Exiting chroot"

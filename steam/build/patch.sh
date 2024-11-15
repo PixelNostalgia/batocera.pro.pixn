@@ -9,7 +9,7 @@ echo
 	echo -e "\n\n\nfixing nvidia ld.so.cache"
 		rm /usr/bin/prepare 2>/dev/null
 		rm /usr/bin/preload 2>/dev/null
-			wget -q --tries=30 -O /usr/bin/prepare "https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/prepare.sh"
+			wget -q --tries=30 -O /usr/bin/prepare "https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/prepare.sh"
 				dos2unix /usr/bin/prepare 2>/dev/null 
 				chmod 777 /usr/bin/prepare 2>/dev/null
 					cp /usr/bin/prepare /usr/bin/preload 2>/dev/null
@@ -23,7 +23,7 @@ echo
 			sed -i 's,os.geteuid() == 0,os.geteuid() == 888,g' /opt/lutris/lutris/gui/application.py 2>/dev/null
 			cp $(which lutris) /usr/bin/lutris-git 2>/dev/null
 			rm $(which lutris) 2>/dev/null
-			  wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /usr/bin/lutris https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/lutris.sh
+			  wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /usr/bin/lutris https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/lutris.sh
 				  dos2unix /usr/bin/lutris 2>/dev/null
 				  chmod 777 /usr/bin/lutris 2>/dev/null
 #--------------------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ echo
 			cd /tmp/
 				f=/tmp/lib32faudio.pkg.tar.zst
 				#link=https://builds.garudalinux.org/repos/chaotic-aur/x86_64/lib32-faudio-tkg-git-24.02.r0.g38e9da7-1-x86_64.pkg.tar.zst
-				link=https://github.com/uureel/batocera.pro/raw/main/steam/build/lib32-faudio-tkg-git.pkg.tar.zst
+				link=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/build/lib32-faudio-tkg-git.pkg.tar.zst
 					wget -q --show-progress --tries=30 -O "$f" "$link"
 					yes "Y" | pacman -U "$f" --overwrite='*' && rm "$f"
 			cd ~/

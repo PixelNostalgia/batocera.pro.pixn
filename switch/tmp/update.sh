@@ -558,13 +558,13 @@ link_ryujinxldn="$7"
 link_ryujinxavalonia="$8"
 # ---------------------------------------------------------------------------------- 
 # LOCKING UPDATES FOR RYUJINX AUTOCONTROLLER COMPATIBILITY: 
-#link_ryujinx=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
-#link_ryujinxavalonia=https://github.com/uureel/batocera.pro/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
+#link_ryujinx=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
+#link_ryujinxavalonia=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
 updates=$(cat /tmp/updater-settings | grep "updates=locked" | cut -d "=" -f2)
    if [[ "$updates" = "locked" ]]; then 
       locked=1
-      link_ryujinx=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
-      link_ryujinxavalonia=https://github.com/uureel/batocera.pro/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
+      link_ryujinx=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
+      link_ryujinxavalonia=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
    fi 
    # unlock for v37 
    if [[ "$(uname -a | awk '{print $3}')" > "6.2" ]]; then 
@@ -815,7 +815,7 @@ if [[ -e "$cfg" ]]; then
             ryujinx_custom_version=$(echo "1.1.$ryujinx_custom_version")
          fi
          if [[ "$(echo "$ryujinx_custom_version" | grep "382")" != "" ]]; then 
-            link_ryujinx=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
+            link_ryujinx=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
          else 
             if [[ "$(echo "$ryujinx_custom_version" | sed 's,^.*1.1.,,g')" > "1215" ]]; then 
                ryujinx_custom_version="1.1.1215"
@@ -831,7 +831,7 @@ if [[ -e "$cfg" ]]; then
          fi
             link_ryujinxavalonia=$(echo "https://github.com/Ryujinx/release-channel-master/releases/download/$ryujinxavalonia_custom_version/test-ava-ryujinx-$ryujinx_custom_version-linux_x64.tar.gz")
                   if [[ "$(echo "$ryujinxavalonia_custom_version" | grep "382")" != "" ]]; then 
-                     link_ryujinxavalonia=https://github.com/uureel/batocera.pro/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
+                     link_ryujinxavalonia=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
                   fi
        fi
    # ///
@@ -1247,8 +1247,8 @@ mkdir $extra/$emu 2>/dev/null
 rm -rf $temp/$emu 2>/dev/null
 mkdir $temp/$emu 2>/dev/null
 cd $temp/$emu
-wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$extra/$emu/xdg-mime" "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime"
-###curl -sSf "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime" -o "$extra/$emu/xdg-mime"
+wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$extra/$emu/xdg-mime" "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/xdg-mime"
+###curl -sSf "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/xdg-mime" -o "$extra/$emu/xdg-mime"
 chmod a+x "$extra/$emu/xdg-mime"
 curl --progress-bar --remote-name --location $link_ryujinx
 LD_LIBRARY_PATH="/userdata/system/switch/extra:/usr/lib64:/usr/lib:/lib:${LD_LIBRARY_PATH}" $extra/batocera-switch-tar -xf $temp/$emu/*.tar.gz
@@ -1395,8 +1395,8 @@ mkdir $extra/$emu 2>/dev/null
 rm -rf $temp/$emu 2>/dev/null
 mkdir $temp/$emu 2>/dev/null
 cd $temp/$emu
-wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$extra/$emu/xdg-mime" "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime"
-###curl -sSf "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime" -o "$extra/$emu/xdg-mime"
+wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$extra/$emu/xdg-mime" "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/xdg-mime"
+###curl -sSf "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/xdg-mime" -o "$extra/$emu/xdg-mime"
 chmod a+x "$extra/$emu/xdg-mime"
 curl --progress-bar --remote-name --location $link_ryujinxldn
 LD_LIBRARY_PATH="/userdata/system/switch/extra:/usr/lib64:/usr/lib:/lib:${LD_LIBRARY_PATH}" $extra/batocera-switch-tar -xf $temp/$emu/*.tar.gz 2>/dev/null
@@ -1552,8 +1552,8 @@ mkdir $extra/$emu 2>/dev/null
 rm -rf $temp/$emu 2>/dev/null
 mkdir $temp/$emu 2>/dev/null
 cd $temp/$emu
-wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$extra/$emu/xdg-mime" "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime"
-###curl -sSf "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime" -o "$extra/$emu/xdg-mime"
+wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$extra/$emu/xdg-mime" "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/xdg-mime"
+###curl -sSf "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/xdg-mime" -o "$extra/$emu/xdg-mime"
 chmod a+x "$extra/$emu/xdg-mime"
 curl --progress-bar --remote-name --location $link_ryujinxavalonia
 LD_LIBRARY_PATH="/userdata/system/switch/extra:/usr/lib64:/usr/lib:/lib:${LD_LIBRARY_PATH}" $extra/batocera-switch-tar -xf $temp/$emu/*.tar.gz 2>/dev/null
@@ -1725,9 +1725,9 @@ release_ryujinx=$(curl -s --retry 5 --retry-delay 1 --retry-connrefused https://
 link_ryujinx=https://github.com/Ryujinx/release-channel-master/releases/download/$release_ryujinx/ryujinx-$release_ryujinx-linux_x64.tar.gz
 # -------------------------------------------------------------------
 # RYUJINXLDN:
-#link_ryujinxldn=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ava-ryujinx-1.1.0-ldn3.0.1-linux_x64.tar.gz
-#link_ryujinxldn=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ryujinx-1.1.0-ldn3.0.1-linux_x64.tar.gz
-link_ryujinxldn=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ryujinx-1.1.0-ldn3.1.3-linux_x64.tar.gz
+#link_ryujinxldn=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/ava-ryujinx-1.1.0-ldn3.0.1-linux_x64.tar.gz
+#link_ryujinxldn=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/ryujinx-1.1.0-ldn3.0.1-linux_x64.tar.gz
+link_ryujinxldn=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/ryujinx-1.1.0-ldn3.1.3-linux_x64.tar.gz
 ## -------------------------------------------------------------------
 # RYUJINXAVALONIA:
 link_ryujinxavalonia=https://github.com/Ryujinx/release-channel-master/releases/download/$release_ryujinx/test-ava-ryujinx-$release_ryujinx-linux_x64.tar.gz

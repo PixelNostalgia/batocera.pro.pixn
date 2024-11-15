@@ -54,8 +54,8 @@ mkdir $pro/$appname 2>/dev/null
 mkdir $pro/$appname/extra 2>/dev/null
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/uureel/batocera.pro/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
+mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
 chmod 777 ~/pro/.dep/* && for file in /userdata/system/pro/.dep/lib*; do sudo ln -s "$file" "/usr/lib/$(basename $file)"; done
 # --------------------------------------------------------------------
 # // end of dependencies 
@@ -289,7 +289,7 @@ icon=/userdata/system/pro/$appname/extra/icon.png
 if [[ -e "$icon" ]] && [[ $(wc -c "$icon" | awk '{print $1}') != "0" ]]; then
 :
 else 
-wget -q -O $icon https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png
+wget -q -O $icon https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png
 fi
 # //
 # -- prepare f1 - applications - app shortcut, 
@@ -341,7 +341,7 @@ dos2unix $port 2>/dev/null
 chmod a+x $port 2>/dev/null
 # -- add pad2key: 
 pad2key=/userdata/roms/ports/QDirStat.sh.keys
-wget -q -O $pad2key https://raw.githubusercontent.com/uureel/batocera.pro/main/qdirstat/extra/QDirStat.sh.keys
+wget -q -O $pad2key https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/qdirstat/extra/QDirStat.sh.keys
 # -- done. 
 sleep 1
 echo -e "${G}> ${W}DONE"

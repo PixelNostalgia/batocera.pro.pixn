@@ -22,9 +22,9 @@ mkdir -p ~/service/dir_ob
 # Download files to dir_ob and make batocera-compositor executable
 
 # Change curl to wget commands
-wget -O ~/service/dir_ob/batocera-compositor https://github.com/uureel/batocera.pro/raw/main/steam/desktop/service/dir_ob/batocera-compositor
-wget -O ~/service/dir_ob/full.xml https://github.com/uureel/batocera.pro/raw/main/steam/desktop/service/dir_ob/full.xml
-wget -O ~/service/dir_ob/window.xml https://github.com/uureel/batocera.pro/raw/main/steam/desktop/service/dir_ob/window.xml
+wget -O ~/service/dir_ob/batocera-compositor https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/desktop/service/dir_ob/batocera-compositor
+wget -O ~/service/dir_ob/full.xml https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/desktop/service/dir_ob/full.xml
+wget -O ~/service/dir_ob/window.xml https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/desktop/service/dir_ob/window.xml
 
 
 # Convert downloaded XML files to Unix format
@@ -33,7 +33,7 @@ dos2unix ~/service/dir_ob/window.xml
 
 # Download windowed file to services and make it executable
 echo "Downloading windowed script..."
-curl -L -o ~/services/windowed https://github.com/uureel/batocera.pro/raw/main/steam/desktop/services/windowed
+curl -L -o ~/services/windowed https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/desktop/services/windowed
 chmod +x ~/services/windowed
 
 # Convert windowed script to Unix format
@@ -41,11 +41,11 @@ dos2unix ~/services/windowed
 
 # Download desktop environment scripts to /userdata/desktop and make them executable
 echo "Downloading LXDE script..."
-curl -L -o /userdata/desktop/LXDE.sh https://github.com/uureel/batocera.pro/raw/main/steam/desktop/LXDE.sh
+curl -L -o /userdata/desktop/LXDE.sh https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/desktop/LXDE.sh
 echo "Downloading MATE script..."
-curl -L -o /userdata/desktop/MATE.sh https://github.com/uureel/batocera.pro/raw/main/steam/desktop/MATE.sh
+curl -L -o /userdata/desktop/MATE.sh https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/desktop/MATE.sh
 echo "Downloading XFCE script..."
-curl -L -o /userdata/desktop/XFCE.sh https://github.com/uureel/batocera.pro/raw/main/steam/desktop/XFCE.sh
+curl -L -o /userdata/desktop/XFCE.sh https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/desktop/XFCE.sh
 chmod +x /userdata/desktop/LXDE.sh
 chmod +x /userdata/desktop/MATE.sh
 chmod +x /userdata/desktop/XFCE.sh

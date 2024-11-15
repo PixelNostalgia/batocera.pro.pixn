@@ -18,7 +18,7 @@ sleep 5
 appname=logs
 mkdir -p /userdata/system/pro/logs/extra 2>/dev/null
 #
-url=https://raw.githubusercontent.com/uureel/batocera.pro/main/logs/extra
+url=https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/logs/extra
 logs=/userdata/system/pro/logs
 wget -q -O $logs/batocera-logs.sh $url/batocera-logs.sh 2>/dev/null
 wget -q -O $logs/batocera-logs-port.sh $url/batocera-logs-port.sh 2>/dev/null

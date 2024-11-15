@@ -6,7 +6,7 @@ APPNAME="KITTY" # for installer info
 appname=kitty   # directory inside /userdata/system/pro/...
 AppName=kitty   # app binary file name
 APPPATH=/userdata/system/pro/$appname/bin/$appname
-APPLINK=https://github.com/uureel/batocera.pro/raw/main/kitty/extra/kitty-0.26.5-x86_64.txz
+APPLINK=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/kitty/extra/kitty-0.26.5-x86_64.txz
 ORIGIN="GITHUB.COM/KOVIDGOYAL/KITTY" # credit & info
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
@@ -48,8 +48,8 @@ mkdir $pro/$appname 2>/dev/null
 mkdir $pro/$appname/extra 2>/dev/null
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/uureel/batocera.pro/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
+mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
 chmod 777 ~/pro/.dep/* && for file in /userdata/system/pro/.dep/lib*; do sudo ln -s "$file" "/usr/lib/$(basename $file)"; done
 # --------------------------------------------------------------------
 # // end of dependencies 

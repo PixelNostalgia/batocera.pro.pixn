@@ -83,8 +83,8 @@ command=$pro/$appname/extra/command; rm $command 2>/dev/null;
 echo "$COMMAND" >> $command 2>/dev/null 
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/uureel/batocera.pro/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
+mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
 chmod 777 ~/pro/.dep/* && for file in /userdata/system/pro/.dep/lib*; do sudo ln -s "$file" "/usr/lib/$(basename $file)"; done
 # --------------------------------------------------------------------
 # // end of dependencies 
@@ -306,7 +306,7 @@ cd ~/
 SIZE=$(($(wc -c $temp/mmc-stable-lin64.tar.gz | awk '{print $1}')/1048576)) 2>/dev/null
 echo -e "${T}mmc-stable-lin64.tar.gz   ${T}$SIZE( )MB   ${G}OK${W}  " | sed 's/( )//g'
 #
-wget -q -O $pro/.dep/tar https://github.com/uureel/batocera.pro/raw/main/.dep/tar
+wget -q -O $pro/.dep/tar https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/.dep/tar
 chmod a+x $pro/.dep/tar
 cd $temp
 ~/pro/.dep/tar -xf $temp/mmc-stable-lin64.tar.gz
@@ -321,7 +321,7 @@ rm -rf $temp 2>/dev/null
 mkdir $temp 2>/dev/null
 echo -e "${G}DOWNLOADING${W} MULTIMC-LIBS"
 sleep 1
-APPLINK2=https://github.com/uureel/batocera.pro/raw/main/multimc/extra/libmultimc.zip
+APPLINK2=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/multimc/extra/libmultimc.zip
 echo -e "${T}$APPLINK2" | sed 's,https://,> ,g' | sed 's,http://,> ,g' 2>/dev/null
 cd $temp
 script -q -c "curl --progress-bar --remote-name --location "$APPLINK2"" /dev/null
@@ -341,7 +341,7 @@ rm -rf $temp 2>/dev/null
 mkdir $temp 2>/dev/null
 echo -e "${G}DOWNLOADING${W} QT5-FRAMEWORK-LIBS"
 sleep 1
-APPLINK3=https://github.com/uureel/batocera.pro/raw/main/multimc/extra/qt5.zip
+APPLINK3=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/multimc/extra/qt5.zip
 echo -e "${T}$APPLINK3" | sed 's,https://,> ,g' | sed 's,http://,> ,g' 2>/dev/null
 cd $temp
 script -q -c "curl --progress-bar --remote-name --location "$APPLINK3"" /dev/null
@@ -361,7 +361,7 @@ rm -rf $temp 2>/dev/null
 mkdir $temp 2>/dev/null
 echo -e "${G}DOWNLOADING${W} QT5-LIBS+" 
 sleep 1
-APPLINK4=https://github.com/uureel/batocera.pro/raw/main/multimc/extra/qt5lib.zip
+APPLINK4=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/multimc/extra/qt5lib.zip
 echo -e "${T}$APPLINK4" | sed 's,https://,> ,g' | sed 's,http://,> ,g' 2>/dev/null
 cd $temp
 script -q -c "curl --progress-bar --remote-name --location "$APPLINK4"" /dev/null

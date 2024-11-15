@@ -44,13 +44,13 @@ if [ ! -d "/userdata/system/pro" ]; then
 fi
 
 # Download pro.sh to /userdata/system/pro
-curl -L https://github.com/uureel/batocera.pro/raw/main/app/pro.sh -o /userdata/system/pro/pro.sh
+curl -L https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/app/pro.sh -o /userdata/system/pro/pro.sh
 
 # Download BatoceraPRO.sh to /userdata/roms/ports
-curl -L https://github.com/uureel/batocera.pro/raw/main/app/BatoceraPRO.sh -o /userdata/roms/ports/BatoceraPRO.sh
+curl -L https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/app/BatoceraPRO.sh -o /userdata/roms/ports/BatoceraPRO.sh
 
 # Download BatoceraPRO.sh.keys to /userdata/roms/ports
-wget  https://github.com/uureel/batocera.pro/raw/main/app/bkeys.txt -P /userdata/roms/ports/
+wget  https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/app/bkeys.txt -P /userdata/roms/ports/
 
 # Set execute permissions for the downloaded scripts
 chmod +x /userdata/system/pro/pro.sh

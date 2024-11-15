@@ -33,9 +33,9 @@ rm compress.sh conty-start.sh create.sh 2>/dev/null
 
 # Download the scripts using curl
 animate_text "Downloading scripts..."
-curl -Ls https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/compress.sh -o compress.sh
-curl -Ls https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/conty-start.sh -o conty-start.sh
-curl -Ls https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/create.sh -o create.sh
+curl -Ls https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/compress.sh -o compress.sh
+curl -Ls https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/conty-start.sh -o conty-start.sh
+curl -Ls https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/create.sh -o create.sh
 
 # Make the scripts executable
 chmod 777 compress.sh conty-start.sh create.sh 2>/dev/null
@@ -60,7 +60,7 @@ if [ -f "conty.sh" ]; then
     animate_text "Downloading Shortcuts"
 
 # Update shortcuts
-wget -q --tries=30 --no-check-certificate --no-cache --no-cookies --tries=50 -O /tmp/update_shortcuts.sh https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/update_shortcuts.sh
+wget -q --tries=30 --no-check-certificate --no-cache --no-cookies --tries=50 -O /tmp/update_shortcuts.sh https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/update_shortcuts.sh
 dos2unix /tmp/update_shortcuts.sh 2>/dev/null
 chmod 777 /tmp/update_shortcuts.sh 2>/dev/null
 bash /tmp/update_shortcuts.sh 

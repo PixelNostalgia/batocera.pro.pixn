@@ -63,14 +63,14 @@ function pre1() {
     if [[ ! -s "$ubp" ]] || [[ ! -s "$bp" ]] || [[ ! -s "/userdata/system/pro/steam/prepare.sh" ]]; then
       mkdir -p "$c/bin" 2>/dev/null
       mkdir -p "$c/usr/bin" 2>/dev/null
-      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$ubp" https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/prepare.sh
+      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$ubp" https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/prepare.sh
       dos2unix "$ubp" 2>/dev/null
       chmod 777 "$ubp" 2>/dev/null
       cp "$ubp" "$bp" 2>/dev/null
       cp "$ubp" "/userdata/system/pro/steam/prepare.sh" 2>/dev/null
       ##
       mkdir -p "$c/opt" 2>/dev/null
-      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$env" https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/env.sh
+      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$env" https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/env.sh
       dos2unix "$env" 2>/dev/null
       chmod 777 "$env" 2>/dev/null
     fi
@@ -81,7 +81,7 @@ function pre2() {
     f="$c/etc/passwd"
     if [[ ! -s "$f" ]] || [[ ! -s "/userdata/system/.local/share/Conty/passwd" ]]; then
       mkdir -p "$c/etc" 2>/dev/null
-      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$f" https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/passwd.sh
+      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$f" https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/passwd.sh
       dos2unix "$f" 2>/dev/null
       chmod 777 "$f" 2>/dev/null
       cp "$f" "/userdata/system/.local/share/Conty/passwd" 2>/dev/null
@@ -89,7 +89,7 @@ function pre2() {
     f="$c/etc/group"
     if [[ ! -s "$c/etc/group" ]] || [[ ! -s "/userdata/system/.local/share/Conty/group" ]]; then
       mkdir -p "$c/etc" 2>/dev/null
-      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$f" https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/group.sh
+      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$f" https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/group.sh
       dos2unix "$f" 2>/dev/null
       chmod 777 "$f" 2>/dev/null
       cp "$f" "/userdata/system/.local/share/Conty/group" 2>/dev/null
@@ -101,7 +101,7 @@ function pre3() {
     if [[ ! -s "$c/usr/bin/lutris" ]]; then
       mkdir -p "$c/usr/bin/" 2>/dev/null
       mkdir -p "$c/bin/" 2>/dev/null
-      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$c/usr/bin/lutris" https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/lutris.sh
+      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$c/usr/bin/lutris" https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/lutris.sh
       dos2unix "$c/usr/bin/lutris" 2>/dev/null
       chmod 777 "$c/usr/bin/lutris" 2>/dev/null
       cp "$c/usr/bin/lutris" "$c/bin/lutris" 2>/dev/null
@@ -109,7 +109,7 @@ function pre3() {
       if [[ "$(cat "$c/usr/bin/lutris" | grep 'ulimit')" = "" ]]; then
       mkdir -p "$c/usr/bin/" 2>/dev/null
       mkdir -p "$c/bin/" 2>/dev/null
-      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$c/usr/bin/lutris" https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/lutris.sh
+      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$c/usr/bin/lutris" https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/lutris.sh
       dos2unix "$c/usr/bin/lutris" 2>/dev/null
       chmod 777 "$c/usr/bin/lutris" 2>/dev/null
       cp "$c/usr/bin/lutris" "$c/bin/lutris" 2>/dev/null
@@ -122,7 +122,7 @@ function pre4() {
     env="$c/opt/env"
     if [[ ! -s "$env" ]] || [[ ! -s "/userdata/system/pro/steam/env.sh" ]]; then
       mkdir -p "$c/opt" 2>/dev/null
-      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$env" https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/env.sh
+      wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$env" https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/env.sh
       dos2unix "$env" 2>/dev/null
       chmod 777 "$env" 2>/dev/null
       cp "$env" "/userdata/system/pro/steam/env.sh" 2>/dev/null
@@ -292,7 +292,7 @@ if [[ ! -s "${nvdir}/.nvidia-$v-downloaded" ]]; then
             cp /userdata/system/.local/share/Conty/aria2c /usr/bin/aria2c
             chmod 777 /usr/bin/aria2c 2>/dev/null
         else
-            wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /usr/bin/aria2c https://github.com/uureel/batocera.pro/raw/main/.dep/aria2c
+            wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /usr/bin/aria2c https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/.dep/aria2c
             chmod 777 /usr/bin/aria2c 2>/dev/null
             cp /usr/bin/aria2c /userdata/system/.local/share/Conty/aria2c
         fi

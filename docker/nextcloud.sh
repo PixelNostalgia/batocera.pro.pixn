@@ -5,7 +5,7 @@
 if ! command -v docker &> /dev/null; then
     dialog --title "Docker Installation" --infobox "Docker could not be found. Installing Docker..." 10 50
     sleep 2 # Gives user time to read the message
-    curl -L https://github.com/uureel/batocera.pro/raw/main/docker/install.sh | bash
+    curl -L https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/docker/install.sh | bash
     # Check if Docker was successfully installed
     if ! command -v docker &> /dev/null; then
         dialog --title "Docker Installation Error" --msgbox "Docker installation failed. Please install Docker manually." 10 50

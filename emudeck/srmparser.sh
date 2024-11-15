@@ -4,7 +4,7 @@
 target_dir="$HOME/.config/steam-rom-manager/userData"
 
 # Define base URL for the fix_parser files
-base_url_fix_parser="https://raw.githubusercontent.com/uureel/batocera.pro/main/emudeck/fix_parser"
+base_url_fix_parser="https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/emudeck/fix_parser"
 
 # Check if the target directory exists
 if [ -d "$target_dir" ]; then

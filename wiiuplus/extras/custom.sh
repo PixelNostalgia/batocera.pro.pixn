@@ -52,8 +52,8 @@ function batocerafixes() {
 echo
 echo -e "${A}██${X}  ${H}applying batocera compatibility fixes..."
 	cd ~/pro/ps3plus/rpcs3 
-		wget -q --no-check-certificate --no-cache --no-cookies -O ~/pro/ps3plus/rpcs3/ai.AppImage "https://github.com/uureel/batocera.pro/raw/main/ps3plus/extras/ai.AppImage"
-		wget -q --no-check-certificate --no-cache --no-cookies -O ~/pro/ps3plus/rpcs3/file "https://github.com/uureel/batocera.pro/raw/main/ps3plus/extras/file"
+		wget -q --no-check-certificate --no-cache --no-cookies -O ~/pro/ps3plus/rpcs3/ai.AppImage "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/ps3plus/extras/ai.AppImage"
+		wget -q --no-check-certificate --no-cache --no-cookies -O ~/pro/ps3plus/rpcs3/file "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/ps3plus/extras/file"
 			chmod a+x ~/pro/ps3plus/rpcs3/ai.AppImage 2>/dev/null
 			chmod a+x ~/pro/ps3plus/rpcs3/file 2>/dev/null 
 				cp ~/pro/ps3plus/rpcs3/file /usr/bin/file 2>/dev/null 

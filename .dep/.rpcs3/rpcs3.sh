@@ -35,9 +35,9 @@ mkdir -p $pro/rpcs3 2>/dev/null
 mkdir -p $pro/rpcs3/extra 2>/dev/null
 extra=$pro/rpcs3/extra 
 # prepare dependencies: 
-wget -q -O /userdata/system/pro/rpcs3/extra/tput https://github.com/uureel/batocera.pro/raw/main/rpcs3/extra/tput
+wget -q -O /userdata/system/pro/rpcs3/extra/tput https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/rpcs3/extra/tput
 chmod +x $pro/rpcs3/extra/tput
-wget -q -O /userdata/system/pro/rpcs3/extra/libtinfo.so.6 https://github.com/uureel/batocera.pro/raw/main/rpcs3/extra/libtinfo.so.6
+wget -q -O /userdata/system/pro/rpcs3/extra/libtinfo.so.6 https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/rpcs3/extra/libtinfo.so.6
 rm /lib/libtinfo.so.6 2>/dev/null; ln -s /userdata/system/pro/rpcs3/extra/libtinfo.so.6 /lib/libtinfo.so.6 2>/dev/null
 # -----------------------------------------------------------------------------------------
 clear
@@ -303,7 +303,7 @@ echo -e "${L}- - - - - - - - - - - - - - - - - - - - - - - - - - - - "
 # prepare roms/ports launchers
 sleep 1
 echo
-urlextra=https://raw.githubusercontent.com/uureel/batocera.pro/main/rpcs3/extra
+urlextra=https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/rpcs3/extra
 # delete old ports
 rm -rf "/userdata/roms/ports/RPCS3 Config.sh" 2>/dev/null
 rm -rf "/userdata/roms/ports/RPCS3 Config.sh.keys" 2>/dev/null
@@ -317,7 +317,7 @@ wget -q -O "/userdata/roms/ports/RPCS3 Config.sh.keys" $urlextra/rpcs3-config.sh
 chmod a+x "/userdata/roms/ports/RPCS3 Config.sh" 2>/dev/null
 # prepare ports updater
 #echo "#!/usr/bin/env bash" >> "/userdata/roms/ports/RPCS3 Updater.sh" 2>/dev/null
-#wget -q -O "/userdata/roms/ports/RPCS3 Updater.sh" https://raw.githubusercontent.com/uureel/batocera.pro/main/rpcs3/rpcs3.sh
+#wget -q -O "/userdata/roms/ports/RPCS3 Updater.sh" https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/rpcs3/rpcs3.sh
 #wget -q -O "/userdata/roms/ports/RPCS3 Updater.sh.keys" $urlextra/rpcs3-updater.sh.keys
 #chmod a+x "/userdata/roms/ports/RPCS3 Updater.sh" 2>/dev/null
 # prepare ports 'use batocera version' 

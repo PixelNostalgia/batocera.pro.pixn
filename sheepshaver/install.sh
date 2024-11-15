@@ -19,7 +19,7 @@ mkdir -p ~/pro/sheepshaver
 
 # Download SheepShaver AppImage
 echo "Downloading SheepShaver AppImage to /userdata/system/pro/sheepshaver..."
-wget https://github.com/uureel/batocera.pro/raw/main/sheepshaver/SheepShaver-x86_64.AppImage -O ~/pro/sheepshaver/SheepShaver-x86_64.AppImage
+wget https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/sheepshaver/SheepShaver-x86_64.AppImage -O ~/pro/sheepshaver/SheepShaver-x86_64.AppImage
 echo "Download complete."
 
 # Make the AppImage executable

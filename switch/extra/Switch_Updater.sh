@@ -458,12 +458,12 @@ link_ryujinxldn="$7"
 link_ryujinxavalonia="$8"
 # ---------------------------------------------------------------------------------- 
 # TEMPORARILY FREEZING UPDATES FOR RYUJINX: 
-#link_ryujinx=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
-#link_ryujinxavalonia=https://github.com/uureel/batocera.pro/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
+#link_ryujinx=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
+#link_ryujinxavalonia=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
 # ---------------------------------------------------------------------------------- 
 # TEMPORARILY FREEZING UPDATES FOR YUZU: 
 #link_yuzu=https://archive.org/download/yuzu-windows-msvc-20240304-537296095_202403/yuzu-mainline-20240304-537296095.AppImage
-#link_yuzuea=https://github.com/uureel/batocera.pro/raw/main/switch/extra/Linux-Yuzu-EA-3180.AppImage
+#link_yuzuea=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/Linux-Yuzu-EA-3180.AppImage
 # ----------------------------------------------------------------------------------
 # PATHS: 
 path_yuzu=/userdata/system/switch/yuzu.AppImage
@@ -625,7 +625,7 @@ mkdir $extra/$emu 2>/dev/null
 rm -rf $temp/$emu 2>/dev/null
 mkdir $temp/$emu 2>/dev/null
 cd $temp/$emu
-wget -q -O "$extra/$emu/xdg-mime" "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime"
+wget -q -O "$extra/$emu/xdg-mime" "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/xdg-mime"
 chmod a+x "$extra/$emu/xdg-mime"
 curl --progress-bar --remote-name --location $link_ryujinx
 $extra/batocera-switch-tar -xf $temp/$emu/*.tar.gz
@@ -699,7 +699,7 @@ mkdir $extra/$emu 2>/dev/null
 rm -rf $temp/$emu 2>/dev/null
 mkdir $temp/$emu 2>/dev/null
 cd $temp/$emu
-wget -q -O "$extra/$emu/xdg-mime" "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime"
+wget -q -O "$extra/$emu/xdg-mime" "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/xdg-mime"
 chmod a+x "$extra/$emu/xdg-mime"
 curl --progress-bar --remote-name --location $link_ryujinxldn
 $extra/batocera-switch-tar -xf $temp/$emu/*.tar.gz 2>/dev/null
@@ -775,7 +775,7 @@ mkdir $extra/$emu 2>/dev/null
 rm -rf $temp/$emu 2>/dev/null
 mkdir $temp/$emu 2>/dev/null
 cd $temp/$emu
-wget -q -O "$extra/$emu/xdg-mime" "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime"
+wget -q -O "$extra/$emu/xdg-mime" "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/xdg-mime"
 chmod a+x "$extra/$emu/xdg-mime"
 curl --progress-bar --remote-name --location $link_ryujinxavalonia
 $extra/batocera-switch-tar -xf $temp/$emu/*.tar.gz 2>/dev/null
@@ -866,7 +866,7 @@ release_ryujinx=$(curl -s https://github.com/Ryujinx/release-channel-master | gr
 link_ryujinx=https://github.com/Ryujinx/release-channel-master/releases/download/$release_ryujinx/ryujinx-$release_ryujinx-linux_x64.tar.gz
 # -------------------------------------------------------------------
 # RYUJINXLDN:
-link_ryujinxldn=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ava-ryujinx-1.1.0-ldn3.0.1-linux_x64.tar.gz
+link_ryujinxldn=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/switch/extra/ava-ryujinx-1.1.0-ldn3.0.1-linux_x64.tar.gz
 ## -------------------------------------------------------------------
 # RYUJINXAVALONIA:
 link_ryujinxavalonia=https://github.com/Ryujinx/release-channel-master/releases/download/$release_ryujinx/test-ava-ryujinx-$release_ryujinx-linux_x64.tar.gz

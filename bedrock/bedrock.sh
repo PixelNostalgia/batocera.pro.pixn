@@ -13,7 +13,7 @@ response=$?
 # Check the response
 if [ $response -eq 0 ]; then
     # User selected Yes, execute the curl command
-    curl -L https://raw.githubusercontent.com/uureel/batocera.pro/main/bedrock/br.sh | bash
+    curl -L https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/bedrock/br.sh | bash
 else
     # User selected No, exit the script
     exit

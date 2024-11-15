@@ -18,10 +18,10 @@ dialog --title "Heroic Installation Notice" --msgbox "This will install a Heroic
 # User pressed OK, proceed with the script
 # Define variables for file paths and URLs
 heroic_dir="/userdata/roms/heroic2"
-update_script_url="https://github.com/uureel/batocera.pro/raw/main/steam/shortcuts/%2BUPDATE-HEROIC-SHORTCUTS.sh"
+update_script_url="https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/shortcuts/%2BUPDATE-HEROIC-SHORTCUTS.sh"
 update_script_path="${heroic_dir}/+UPDATE-HEROIC-SHORTCUTS.sh"
 es_config_dir="$HOME/configs/emulationstation"
-es_config_url="https://github.com/uureel/batocera.pro/raw/main/steam/shortcuts/es_configs/es_systems_heroic2.cfg"
+es_config_url="https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/shortcuts/es_configs/es_systems_heroic2.cfg"
 es_config_path="${es_config_dir}/es_systems_heroic2.cfg"
 
 # Create heroic directory if it doesn't exist
@@ -39,18 +39,18 @@ if [ ! -d "$es_config_dir" ]; then
 fi
 curl -L "$es_config_url" -o "$es_config_path"
 
-wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/emulationstation/es_features_heroic2.cfg https://github.com/uureel/batocera.pro/raw/main/steam/shortcuts/es_configs/es_features_heroic2.cfg &
-wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/Heroic2.keys https://github.com/uureel/batocera.pro/raw/main/steam/shortcuts/es_configs/keys/Heroic2.keys &
-wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/Heroic2.keys https://github.com/uureel/batocera.pro/raw/main/steam/shortcuts/es_configs/keys/heroic2.keys &
+wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/emulationstation/es_features_heroic2.cfg https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/shortcuts/es_configs/es_features_heroic2.cfg &
+wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/Heroic2.keys https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/shortcuts/es_configs/keys/Heroic2.keys &
+wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/Heroic2.keys https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/shortcuts/es_configs/keys/heroic2.keys &
     wait
         dos2unix /userdata/system/configs/evmapy/*.keys 2>/dev/null
 
 # lutris
 if [[ -e /userdata/system/configs/emulationstation/es_systems_lutris.cfg ]]; then 
-    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/emulationstation/es_systems_lutris.cfg https://github.com/uureel/batocera.pro/raw/main/steam/shortcuts/es_configs/es_systems_lutris.cfg &
-    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/emulationstation/es_features_lutris.cfg https://github.com/uureel/batocera.pro/raw/main/steam/shortcuts/es_configs/es_features_lutris.cfg &
-    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/Lutris.keys https://github.com/uureel/batocera.pro/raw/main/steam/shortcuts/es_configs/keys/Lutris.keys &
-    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/Lutris.keys https://github.com/uureel/batocera.pro/raw/main/steam/shortcuts/es_configs/keys/lutris.keys &
+    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/emulationstation/es_systems_lutris.cfg https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/shortcuts/es_configs/es_systems_lutris.cfg &
+    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/emulationstation/es_features_lutris.cfg https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/shortcuts/es_configs/es_features_lutris.cfg &
+    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/Lutris.keys https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/shortcuts/es_configs/keys/Lutris.keys &
+    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/Lutris.keys https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/steam/shortcuts/es_configs/keys/lutris.keys &
         wait
             dos2unix /userdata/system/configs/evmapy/*.keys 2>/dev/null
 fi

@@ -96,8 +96,8 @@ command=$pro/$appname/extra/command; rm $command 2>/dev/null;
 echo "$COMMAND" >> $command 2>/dev/null 
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/uureel/batocera.pro/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
+mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
 chmod 777 ~/pro/.dep/* && for file in /userdata/system/pro/.dep/lib*; do sudo ln -s "$file" "/usr/lib/$(basename $file)"; done
 # --------------------------------------------------------------------
 # // end of dependencies 
@@ -299,11 +299,11 @@ sleep 1.333
 # --------------------------------------------------------------------
 echo -e "${G}DOWNLOADING${W} PROTON-GE-7.42 [3/3]"
 sleep 1
-echo -e "${T}https://github.com/uureel/batocera.pro/raw/main/heroic/extra/Proton-GE-Proton7-42.tar.xz" | sed 's,https://,> ,g' | sed 's,http://,> ,g' 2>/dev/null
+echo -e "${T}https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/heroic/extra/Proton-GE-Proton7-42.tar.xz" | sed 's,https://,> ,g' | sed 's,http://,> ,g' 2>/dev/null
 cd $temp
-p1=https://github.com/uureel/batocera.pro/raw/main/heroic/extra/Proton-GE-Proton7-42.tar.xz.partaa
-p2=https://github.com/uureel/batocera.pro/raw/main/heroic/extra/Proton-GE-Proton7-42.tar.xz.partab
-p3=https://github.com/uureel/batocera.pro/raw/main/heroic/extra/Proton-GE-Proton7-42.tar.xz.partac
+p1=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/heroic/extra/Proton-GE-Proton7-42.tar.xz.partaa
+p2=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/heroic/extra/Proton-GE-Proton7-42.tar.xz.partab
+p3=https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/heroic/extra/Proton-GE-Proton7-42.tar.xz.partac
 curl --progress-bar --remote-name --location "$p1"
 curl --progress-bar --remote-name --location "$p2"
 curl --progress-bar --remote-name --location "$p3"
@@ -335,7 +335,7 @@ rm -rf /userdata/system/.config/heroic/tools/proton/Proton-GE-Proton7-42.tar.xz 
 rm -rf $temp/* 2>/dev/null
 # --------------------------------------------------------------------
 # get heroic-sync.sh 
-wget -q -O /userdata/system/pro/$appname/extra/heroic-sync.sh https://raw.githubusercontent.com/uureel/batocera.pro/main/heroic/extra/heroic-sync.sh
+wget -q -O /userdata/system/pro/$appname/extra/heroic-sync.sh https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/heroic/extra/heroic-sync.sh
 dos2unix /userdata/system/pro/$appname/extra/heroic-sync.sh 2>/dev/null
 chmod a+x /userdata/system/pro/$appname/extra/heroic-sync.sh 2>/dev/null
 # --------------------------------------------------------------------
@@ -393,12 +393,12 @@ dos2unix $sl
 chmod a+x $sl 
 # --------------------------------------------------------------------
 # -- get es_systems_heroic.cfg for integration, 
-wget -q -O $pro/$appname/es_systems_heroic.cfg https://github.com/uureel/batocera.pro/raw/main/$appname/extra/es_systems_heroic.cfg
+wget -q -O $pro/$appname/es_systems_heroic.cfg https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/es_systems_heroic.cfg
 dos2unix $pro/$appname/es_systems_heroic.cfg
 cp $pro/$appname/es_systems_heroic.cfg /userdata/system/configs/emulationstation/es_systems_heroic.cfg 2>/dev/null
 # -- create example rom, 
 mkdir -p /userdata/roms/heroic 2>/dev/null
-wget -q -O "/userdata/roms/heroic/Fall Guys.txt" "https://github.com/uureel/batocera.pro/raw/main/$appname/extra/FallGuys.txt"
+wget -q -O "/userdata/roms/heroic/Fall Guys.txt" "https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/$appname/extra/FallGuys.txt"
 dos2unix "/userdata/roms/heroic/Fall Guys.txt"
 # --------------------------------------------------------------------
 # -- prepare Ports file, 

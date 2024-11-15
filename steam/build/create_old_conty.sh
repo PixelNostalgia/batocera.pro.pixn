@@ -96,10 +96,10 @@ script_dir="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 
 # unionfs / nvidia patcher -- root patch
 mkdir -p "$script_dir/utils" 2>/dev/null
-wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$script_dir/utils/libunionfs.so" "https://github.com/uureel/batocera.pro/blob/main/steam/build/unionfs/libunionfs.so"
-wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$script_dir/utils/unionfsctl" "https://github.com/uureel/batocera.pro/blob/main/steam/build/unionfs/unionfsctl"
-wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$script_dir/utils/unionfs3" "https://github.com/uureel/batocera.pro/blob/main/steam/build/unionfs/unionfs3"
-wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$script_dir/utils/unionfs" "https://github.com/uureel/batocera.pro/blob/main/steam/build/unionfs/unionfs"
+wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$script_dir/utils/libunionfs.so" "https://github.com/PixelNostalgia/batocera.pro.pixn/blob/main/steam/build/unionfs/libunionfs.so"
+wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$script_dir/utils/unionfsctl" "https://github.com/PixelNostalgia/batocera.pro.pixn/blob/main/steam/build/unionfs/unionfsctl"
+wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$script_dir/utils/unionfs3" "https://github.com/PixelNostalgia/batocera.pro.pixn/blob/main/steam/build/unionfs/unionfs3"
+wget -q --tries=10 --no-check-certificate --no-cache --no-cookies -O "$script_dir/utils/unionfs" "https://github.com/PixelNostalgia/batocera.pro.pixn/blob/main/steam/build/unionfs/unionfs"
 chmod 777 "$script_dir/utils/libunionfs.so" 2>/dev/null
 chmod 777 "$script_dir/utils/unionfsctl" 2>/dev/null
 chmod 777 "$script_dir/utils/unionfs3" 2>/dev/null
@@ -537,7 +537,7 @@ echo "Entering chroot"
 # REBUILD LIBC WITH DT_HASH PATCH
 chroot "${bootstrap}" \
 /usr/bin/env LANG=en_US.UTF-8 TERM=xterm PATH="/bin:/sbin:/usr/bin:/usr/sbin" /bin/bash -c \
-"curl -Ls https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/build/libc-dthash-patch.sh | bash && exit"
+"curl -Ls https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/build/libc-dthash-patch.sh | bash && exit"
 # ------------------------------------------------------------------------------------------
 
 echo "Exiting chroot"

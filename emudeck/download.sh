@@ -69,7 +69,7 @@ DESTINATION_DIR="/userdata/roms/conty"
 mkdir -p "$DESTINATION_DIR"
 
 # Base URL for downloading
-BASE_URL="https://raw.githubusercontent.com/uureel/batocera.pro/main/emudeck/shortcuts"
+BASE_URL="https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/emudeck/shortcuts"
 
 # Declare an array of file names to download
 FILES=(
@@ -105,7 +105,7 @@ echo "Downloading Steam ROM Manager parser fix"
 target_dir="$HOME/.config/steam-rom-manager/userData"
 
 # Define base URL for the fix_parser files
-base_url_fix_parser="https://raw.githubusercontent.com/uureel/batocera.pro/main/emudeck/fix_parser"
+base_url_fix_parser="https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/emudeck/fix_parser"
 
 # Check if the target directory exists
 if [ -d "$target_dir" ]; then

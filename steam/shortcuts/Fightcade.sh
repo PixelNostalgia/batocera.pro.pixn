@@ -3,7 +3,7 @@
 function update_launcher() {
   tmp=/tmp/.fc && rm $tmp 2>/dev/null
   launcher="/userdata/system/pro/steam/batocera-fightcade.sh"
-  link="https://raw.githubusercontent.com/uureel/batocera.pro/main/steam/shortcuts/batocera-fightcade.sh"
+  link="https://raw.githubusercontent.com/PixelNostalgia/batocera.pro.pixn/main/steam/shortcuts/batocera-fightcade.sh"
     wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O "$tmp" "$link"
       if [[ -s "$tmp" ]]; then cp "$tmp" "$launcher" && rm "$tmp"; else exit 1; fi
         chmod 777 "$launcher" 2>/dev/null && dos2unix "$launcher" 2>/dev/null

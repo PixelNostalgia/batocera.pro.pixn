@@ -13,7 +13,7 @@ case $response in
       mkdir -p ~/batocera-compositor
 
       # Download the compositor script into the folder
-      wget -O ~/batocera-compositor/batocera-compositor https://github.com/uureel/batocera.pro/raw/main/launchers/compositor/batocera-compositor
+      wget -O ~/batocera-compositor/batocera-compositor https://github.com/PixelNostalgia/batocera.pro.pixn/raw/main/launchers/compositor/batocera-compositor
       chmod +x ~/batocera-compositor/batocera-compositor
 
       # Add line to launch it in the background in ~/custom.sh for next boot
